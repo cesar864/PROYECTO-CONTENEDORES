@@ -1,18 +1,37 @@
-# Proyecto de Integración Continua - Entrega 1
+# Proyecto de Integración Continua con Docker
 
-Este proyecto crea dos contenedores con Docker:
-- Una aplicación Flask (contenedor `web`)
-- Una base de datos MySQL (contenedor `db`)
+Este proyecto consiste en una aplicación web desarrollada con Flask que se conecta a una base de datos MySQL, ambos ejecutándose en contenedores Docker orquestados con Docker Compose.
 
-## Cómo ejecutar
+## Tecnologías
 
-1. Clona el repositorio.
-2. Ejecuta:
+- Python / Flask
+- MySQL
+- Docker
+- Docker Compose
+
+## Estructura del Proyecto
+
+- `/app`: Código fuente de la aplicación Flask.
+- `Dockerfile`: Construye la imagen de la app.
+- `docker-compose.yml`: Orquesta la aplicación y la base de datos.
+
+## ¿Cómo ejecutar?
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/cesar864/PROYECTO-CONTENEDORES.git
+   cd PROYECTO-CONTENEDORES
    ```
-   docker-compose up --build
+
+2. Ejecuta los contenedores:
+   ```bash
+   docker-compose up
    ```
-3. Abre tu navegador en: [http://localhost:5000](http://localhost:5000)
 
-## Verificación
+3. Accede a la aplicación:
+   - Visita `http://localhost:5000` para verificar que la app está conectada a MySQL correctamente.
 
-La app intentará conectarse a la base de datos MySQL y mostrará un mensaje de éxito o error.
+## Autoría
+
+Trabajo realizado como parte del módulo Énfasis Profesional I del Politécnico Grancolombiano.
+
